@@ -1,0 +1,223 @@
+/*reset*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*reset finished*/
+
+:root {
+    --main: pink;
+    --secondary: blue;
+    --tertiary: green;
+    --font: 'Prompt', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--main);
+    padding: 10px 30px;
+    font-family: var(--font);
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+    transition: .15s ease-in-out;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    max-height: 150px;
+    margin-right: 50px;
+}
+
+.nav_link_cont {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_link_cont a {
+    color: black;
+    display: inline-block;
+    position: relative;
+}
+
+.nav_link_cont a:hover {
+    color: var(--secondary);
+}
+
+.nav_link_cont a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--tertiary);
+    transform-origin: bottom right;
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav_link_cont a:hover:after {
+    color: var(--tertiary);
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav_link_cont a:active {
+    animation: buttonClick .2s ease;
+}
+
+@keyframes buttonClick {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
