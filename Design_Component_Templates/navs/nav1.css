@@ -201,7 +201,7 @@ a {
 }
 
 .nav_link_cont a:active {
-    animation: buttonClick .2s ease;
+    animation: buttonClick .15s ease;
 }
 
 @keyframes buttonClick {
